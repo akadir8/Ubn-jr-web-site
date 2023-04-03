@@ -1,0 +1,30 @@
+[
+    {
+        "mainTitle":"Ubn-Jr",
+        "home":"Ana Sayfa",
+        "web":"Web",
+        "cyber":"Siber",
+        "design":"Tasarım",
+        "electronic":"Elektronik"
+    },
+    {
+        "header": "Web Geliştirme",
+        "content": "Web geliştirme, internet üzerindeki web siteleri ve uygulamaları oluşturma sürecidir. Bu süreç, web tasarımı, web yazılımı ve web sunucusu yönetimi gibi birçok disiplini içerir. Web geliştirme, HTML, CSS ve JavaScript gibi web teknolojileri ve araçları kullanarak gerçekleştirilir. Bir web geliştiricinin hedefleri arasında, iyi bir kullanıcı deneyimi sağlamak, sayfa yükleme hızını artırmak, web sitelerini güvenli hale getirmek ve arama motoru optimizasyonu yapmak gibi amaçlar bulunur. Web geliştirme, herhangi bir sektördeki birçok işletmenin ve kuruluşun başarısı için önemlidir."
+    },
+
+    {
+        "header":"Siber",
+        "content":"Siber güvenlik, bilgisayar sistemleri, ağlar, yazılımlar, cihazlar ve diğer dijital ortamları tehditlere karşı koruma işlemidir. Siber güvenlik, kötü amaçlı yazılımlar, bilgi hırsızlığı, kimlik avı, fidye yazılımları ve diğer siber saldırılar gibi tehditlere karşı korunmayı amaçlar. Bu tehditler, siber suçluların ve siber casusların neden olduğu zararlı etkilere yol açabilir. Siber güvenlik tedbirleri, güvenlik yazılımı, güvenlik protokolleri, güvenlik politikaları ve diğer teknolojik araçları kullanarak gerçekleştirilir. Siber güvenlik, hem bireysel hem de kurumsal düzeyde ciddi bir konudur ve dijital ortamda güvenliği sağlamak için sürekli olarak geliştirilmektedir."
+        
+    },
+
+    {
+        "header":"Tasarım",
+        "content":"Tasarım, bir ürün, nesne veya hizmetin amaçlarına uygun olarak planlanması ve oluşturulması sürecidir. Tasarım, işlevsellik, estetik, ergonomi ve kullanılabilirlik gibi birçok farklı faktörü içerir. Tasarım süreci, araştırma, analiz, planlama, prototipleme ve uygulama gibi aşamaları kapsar. Tasarım, moda, grafik tasarım, endüstriyel tasarım, iç mekan tasarımı, dijital tasarım ve daha birçok alanda uygulanabilir. Tasarımın temel amacı, kullanıcıların ihtiyaçlarını karşılamak ve hayatlarını kolaylaştırmak için çözümler sunmaktır."
+    },
+
+    {
+        "header":"Elektronik",
+        "content":"Elektronik, elektronların hareketi ile ilgili fenomenleri inceleyen bilim dalıdır. Bu bilim dalı, elektrik, manyetizma, yarıiletkenler ve diğer elektronik bileşenlerin kullanımını içerir. Elektronik, elektronik devreler, yarıiletkenler, sensörler, amplifikatörler, veri dönüştürücüler, haberleşme sistemleri ve daha birçok alanda kullanılır. Elektronik cihazlar, televizyonlar, cep telefonları, bilgisayarlar, oyun konsolları ve diğer birçok cihazın yapımında kullanılır. Elektronik, modern teknolojik gelişmelerin çoğunda önemli bir rol oynar ve sürekli olarak yenilikçi teknolojiler geliştirilir."
+    }
+]
