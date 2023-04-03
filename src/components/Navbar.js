@@ -25,9 +25,9 @@ export const Navbar = () => {
               <button onClick={() => window.location.href = link.link} className='text-gray-800 hover:text-gray-400 duration-500'>
               {link.name}
               </button>
-    </li>
-  ))
-}
+            </li>
+          ))
+        }
 
         </ul>
       </div>
