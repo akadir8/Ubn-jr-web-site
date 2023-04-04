@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import logo from './components/logo2.png';
+import HomePage from './components/HomePage';
 import Footer from './components/Footer';
+
 
 function App() {
   const [activeLink, setActiveLink] = useState(0);
@@ -41,7 +43,7 @@ function App() {
       </div>
     </div>
       </div>
-      
+      <HomePage/>
       <Footer/>
      
       </>

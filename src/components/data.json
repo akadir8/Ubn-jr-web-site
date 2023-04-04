@@ -1,13 +1,5 @@
 [
     {
-        "mainTitle":"Ubn-Jr",
-        "home":"Ana Sayfa",
-        "web":"Web",
-        "cyber":"Siber",
-        "design":"Tasarım",
-        "electronic":"Elektronik"
-    },
-    {
         "header": "Web Geliştirme",
         "content": "Web geliştirme, internet üzerindeki web siteleri ve uygulamaları oluşturma sürecidir. Bu süreç, web tasarımı, web yazılımı ve web sunucusu yönetimi gibi birçok disiplini içerir. Web geliştirme, HTML, CSS ve JavaScript gibi web teknolojileri ve araçları kullanarak gerçekleştirilir. Bir web geliştiricinin hedefleri arasında, iyi bir kullanıcı deneyimi sağlamak, sayfa yükleme hızını artırmak, web sitelerini güvenli hale getirmek ve arama motoru optimizasyonu yapmak gibi amaçlar bulunur. Web geliştirme, herhangi bir sektördeki birçok işletmenin ve kuruluşun başarısı için önemlidir."
     },
