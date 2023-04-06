@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import HomePage from './components/HomePage';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import Page from './components/Page';
 
 function App() {
   const [activeLink, setActiveLink] = useState(0);
@@ -15,7 +16,7 @@ function App() {
   return (
     <div className="App ">
       <Navbar activeLink={activeLink} setActiveLink={setActiveLink} Links={Links} />
-      <HomePage/>
+      <Page activeLink={activeLink} />
       <Footer/>
     </div>
   );
