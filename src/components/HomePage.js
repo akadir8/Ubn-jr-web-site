@@ -17,12 +17,16 @@ function HomePage() {
         <p className="text-gray-800">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit ratione totam illum harum rerum magnam hic sed architecto dolorum deleniti vel, adipisci neque libero, ea eius repellendus. Ipsa, inventore perferendis!</p>
         <div className="space-x-3 text-2xl text-[#002B5B] flex">
         <div>
-            <FaYoutube />
-        </div>
-        <div>
-            <FaGithub />
-        </div>
-        </div>
+          <a href="https://www.youtube.com/@UbnJr">
+          <FaYoutube />
+          </a>
+          </div>
+          <div>
+          <a href="https://github.com/orgs/Ubn-Jr/dashboard">
+          <FaGithub />
+          </a>
+          </div>
+          </div>
 
       </div>
     </>
