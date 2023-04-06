@@ -19,7 +19,7 @@ function Navbar(props) {
               <li key={link.name} className='md:ml-8 text-xl'>
                 <button 
                   onClick={() => setActiveLink(index)} 
-                  className={`text-gray-800 hover:text-gray-400 duration-500 ${activeLink === index ? "font-bold" : ""}`}
+                  className={`text-gray-800 hover:text-gray-400 duration-100 ${activeLink === index ? "font-bold" : ""}`}
                 >
                   {link.name}
                 </button>
