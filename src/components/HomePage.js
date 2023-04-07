@@ -14,7 +14,7 @@ function HomePage() {
         <Typist
             className="typed-text text-cyan-700"
             sentences={["Yazılım", "Web","Siber", "Tasarım", "Elektronik"]}
-            pauseTime={10000}
+            pauseTime={1000}
             typeSpeed={10000}
             backSpeed={10000}  
             backDelay={3000}  
