@@ -23,7 +23,7 @@ function HomePage() {
       </div>
       <div className="hidden lg:flex flex-col gap-5 rounded-md shadow-lg shadow-[#FC2947] absolute top-0 bottom-0 m-auto right-10 bg-white p-6 h-fit w-1/3">
         <h1 className="text-4xl font-bold text-cyan-700">Lorem, ipsum dolor.</h1>
-        <p className="text-gray-800">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit ratione totam illum harum rerum magnam hic sed architecto dolorum deleniti vel, adipisci neque libero, ea eius repellendus. Ipsa, inventore perferendis!</p>
+        <p className="text-gray-800 font-semibold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit ratione totam illum harum rerum magnam hic sed architecto dolorum deleniti vel, adipisci neque libero, ea eius repellendus. Ipsa, inventore perferendis!</p>
         <div className="space-x-3 text-2xl text-[#002B5B] flex">
         <div>
           <a href="https://www.youtube.com/@UbnJr">

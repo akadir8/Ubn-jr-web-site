@@ -1,19 +1,18 @@
 {
-    "web": {
-      "header": "Web Geliştirme",
-      "content": "Web geliştirme, internet üzerindeki web siteleri ve uygulamaları oluşturma sürecidir..."
-    },
-    "siber": {
-      "header": "Siber",
-      "content": "Siber güvenlik, bilgisayar sistemleri, ağlar, yazılımlar, cihazlar ve diğer dijital ortamları tehditlere karşı koruma işlemidir..."
-    },
-    "tasarım": {
-      "header": "Tasarım",
-      "content": "Tasarım, bir ürün, nesne veya hizmetin amaçlarına uygun olarak planlanması ve oluşturulması sürecidir..."
-    },
-    "elektronik": {
-      "header": "Elektronik",
-      "content": "Elektronik, elektronların hareketi ile ilgili fenomenleri inceleyen bilim dalıdır..."
-    }
+  "web": {
+    "header": "Web Geliştirme",
+    "content": "Web geliştirme, internet üzerinde çalışan web siteleri ve uygulamaları oluşturma sürecidir. Bu süreç, birçok farklı teknoloji, araç ve dil kullanılarak gerçekleştirilir. Örneğin, HTML, CSS ve JavaScript gibi temel web teknolojileri kullanılarak web siteleri tasarlanır ve kodlanır. Ayrıca, web geliştiriciler, sunucu tarafı programlama dilleri ve veritabanı yönetim sistemleri kullanarak web uygulamalarını oluştururlar. Web geliştirme, her geçen gün daha da önem kazanan bir alandır ve internetin hayatımızda giderek daha fazla yer kaplamasıyla birlikte bu önemli artmaya devam edecektir."
+  },
+  "siber": {
+    "header": "Siber",
+    "content": "Siber güvenlik, internet ortamındaki bilgi ve sistemleri korumak için alınan tedbirleri ifade eder. Bu tedbirler, kötü amaçlı yazılımların (virüsler, truva atları vb.) önlenmesi, güçlü şifreleme yöntemlerinin kullanılması, ağ güvenliği önlemlerinin alınması, siber saldırılara karşı savunma mekanizmalarının geliştirilmesi ve kullanıcıların farkındalığının artırılması gibi konuları kapsar. Siber güvenlik, özellikle son yıllarda giderek daha büyük bir önem kazanmaktadır. Çünkü siber saldırıların sayısı ve karmaşıklığı artmıştır ve bu saldırılar ciddi maddi ve manevi zararlara neden olabilir. Bu nedenle, bireyler, kurumlar ve devletler, siber güvenliğe yönelik yatırımlarını ve tedbirlerini artırmaktadırlar."
+  },
+  "tasarım": {
+    "header": "Tasarım",
+    "content": "Tasarım, bir ürünün ya da hizmetin kullanımı ve görünümüyle ilgili her türlü kararı kapsayan bir süreçtir. Tasarımın amacı, kullanıcının ihtiyaçlarını ve isteklerini karşılamak, görsel estetik sunmak ve işlevselliği sağlamaktır. Tasarım süreci, fikir geliştirme, araştırma, prototip oluşturma, test etme ve son ürünün hazırlanması aşamalarını içerir. Tasarım alanları arasında grafik tasarım, endüstriyel tasarım, iç mekan tasarımı, moda tasarımı, web tasarımı ve daha birçok farklı disiplin bulunur. Tasarım, insanların hayatını kolaylaştırmak ve daha iyi bir dünya yaratmak için önemli bir araçtır."
+  },
+  "elektronik": {
+    "header": "Elektronik",
+    "content": "Elektronik, elektronların hareketi ve kontrolü ile ilgili bir bilim dalıdır. Bu bilim dalı, elektrik enerjisi ve sinyalleri üzerine odaklanır ve devrelerin, cihazların ve sistemlerin tasarımı ve çalışmasıyla ilgilenir. Elektronik, günümüzde birçok farklı alanda kullanılmaktadır, örneğin iletişim, sağlık, eğlence ve ulaşım gibi alanlarda. Elektronik cihazlar, yarı iletken teknolojisi kullanılarak üretilirler ve mikro işlemciler, sensörler, entegre devreler, transistörler ve diğer elektronik bileşenler kullanılarak tasarlanırlar. Elektronik alanında sürekli olarak gelişmeler yaşanmaktadır ve bu da daha gelişmiş cihazlar ve sistemlerin üretilmesine olanak sağlamaktadır."
   }
-  
+}
