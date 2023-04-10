@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "./logo2.png";
+import Button from "./Button";
 /* 1-Navbar bileşeni bir fonksiyonel bileşendir ve bir dizi prop alır. Bu props'lar arasında:
 2-activeLink: kullanıcının şu anda seçili olan bağlantıyı belirlemek için kullanılan bir sayı (dizi indeksi)
 setActiveLink: kullanıcının seçtiği bağlantıyı güncellemek için bir fonksiyon
@@ -33,9 +34,7 @@ function Navbar(props) {
               </li>
             ))}
             <li className="md:ml-8">
-              <button className="mr-12 rounded-full py-2 px-3 text-xs font-bold cursor-pointer tracking-wider bg-cyan-600 text-white hover:bg-cyan-700 duration-100">
-                Bize katılmak ister misiniz ?
-              </button>
+              <Button/>
             </li>
           </ul>
           {/*  Bağlantılar dinamik olarak Links propundan alınır ve her bir bağlantı öğesi bir <button> öğesi içinde gösterilir. Kullanıcının seçtiği bağlantıyı activeLink propundan alır ve seçilen bağlantılar farklı bir stil ile gösterilir. Son olarak, bir "Bize katılmak ister misiniz?" düğmesi de gösterilir. */}
