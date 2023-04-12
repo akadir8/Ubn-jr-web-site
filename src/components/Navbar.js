@@ -7,10 +7,6 @@ setActiveLink: kullanıcının seçtiği bağlantıyı güncellemek için bir fo
 Links: navbar'da gösterilen bağlantıların bir dizisi */
 function Navbar(props) {
   const { activeLink, setActiveLink, Links } = props;
-  const handleClick = () => {
-    setActiveLink("contact");
-  };
-
   return (
     /* Bileşen bir <div> öğesi ile başlar ve ardından bir navbar bileşeni içeren bir <div> öğesi vardır. Navbar bileşeni, Bootstrap benzeri bir görünüm sağlamak için birkaç CSS sınıfı kullanır */
     <div className="bg-[#E8D5C4] w-full h-screen">
