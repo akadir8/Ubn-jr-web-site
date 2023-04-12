@@ -63,8 +63,6 @@ const Form = ({ onClose }) => {
                 className="border border-gray-400 p-2 w-full rounded-md"
                 placeholder="Soyisminizi Giriniz..."
               />
-
-
             </div>
             <div className="mb-6">
               <h1 className="text-xl font-bold mb-2">E MAİL :</h1>
