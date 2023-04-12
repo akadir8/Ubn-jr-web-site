@@ -30,6 +30,7 @@ const Form = () => {
           <form onSubmit={handleSubmit}>
             <div className="mb-6">
               <h1 className="text-xl font-bold mb-2">İSİM :</h1>
+
               <input
                 type="text"
                 id="name"
@@ -37,10 +38,12 @@ const Form = () => {
                 value={formData.name}
                 onChange={handleChange}
                 className="border border-gray-400 p-2 w-full rounded-md"
+                placeholder="İsminizi Giriniz..."
               />
             </div>
             <div className="mb-6">
               <h1 className="text-xl font-bold mb-2">SOY İSİM :</h1>
+
               <input
                 type="text"
                 id="surname"
@@ -48,6 +51,7 @@ const Form = () => {
                 value={formData.surname}
                 onChange={handleChange}
                 className="border border-gray-400 p-2 w-full rounded-md"
+                placeholder="Soyisminizi Giriniz..."
               />
             </div>
             <div className="mb-6">
@@ -59,6 +63,7 @@ const Form = () => {
                 value={formData.email}
                 onChange={handleChange}
                 className="border border-gray-400 p-2 w-full rounded-md"
+                placeholder="E-mail'inizi Giriniz..."
               />
             </div>
             <div className="mb-6">
@@ -69,6 +74,7 @@ const Form = () => {
                 value={formData.message}
                 onChange={handleChange}
                 className="border border-gray-400 p-2 w-full rounded-md"
+                placeholder="Mesajınızı Giriniz..."
               />
             </div>
             <div className="text-right">
