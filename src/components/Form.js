@@ -31,45 +31,57 @@ const Form = () => {
             <div className="mb-6">
               <h1 className="text-xl font-bold mb-2">İSİM :</h1>
               <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="border border-gray-400 p-2 w-full rounded-md"
-              />
+  type="text"
+  id="name"
+  name="name"
+  value={formData.name}
+  onChange={handleChange}
+  className="border border-gray-400 p-2 w-full rounded-md"
+  placeholder="İsminizi girin..."
+/>
+
+            
+          
             </div>
             <div className="mb-6">
               <h1 className="text-xl font-bold mb-2">SOY İSİM :</h1>
               <input
-                type="text"
-                id="surname"
-                name="surname"
-                value={formData.surname}
-                onChange={handleChange}
-                className="border border-gray-400 p-2 w-full rounded-md"
-              />
+  type="text"
+  id="surname"
+  name="surname"
+  value={formData.name}
+  onChange={handleChange}
+  className="border border-gray-400 p-2 w-full rounded-md"
+  placeholder="Soyisminizi girin..."
+/>
+              
+             
             </div>
             <div className="mb-6">
               <h1 className="text-xl font-bold mb-2">E MAİL :</h1>
               <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="border border-gray-400 p-2 w-full rounded-md"
-              />
+  type="email"
+  id="email"
+  name="email"
+  value={formData.name}
+  onChange={handleChange}
+  className="border border-gray-400 p-2 w-full rounded-md"
+  placeholder="Mailinizi girin..."
+/>
+              
             </div>
             <div className="mb-6">
               <h1 className="text-xl font-bold mb-2">MESAJ :</h1>
               <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                className="border border-gray-400 p-2 w-full rounded-md"
-              />
+  
+  id="message"
+  name="message"
+  value={formData.name}
+  onChange={handleChange}
+  className="border border-gray-400 p-2 w-full rounded-md"
+  placeholder="Mesajınızı girin..."
+/>
+              
             </div>
             <div className="text-right">
               <button
