@@ -30,6 +30,7 @@ const Form = () => {
           <form onSubmit={handleSubmit}>
             <div className="mb-6">
               <h1 className="text-xl font-bold mb-2">İSİM :</h1>
+
               <input
                 type="text"
                 id="name"
@@ -45,6 +46,7 @@ const Form = () => {
             </div>
             <div className="mb-6">
               <h1 className="text-xl font-bold mb-2">SOY İSİM :</h1>
+
               <input
                 type="text"
                 id="surname"
@@ -52,7 +54,7 @@ const Form = () => {
                 value={formData.name}
                 onChange={handleChange}
                 className="border border-gray-400 p-2 w-full rounded-md"
-                placeholder="Soyisminizi girin..."
+                placeholder="Soyisminizi Giriniz..."
               />
 
 
