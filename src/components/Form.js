@@ -29,7 +29,7 @@ const Form = () => {
         <div className="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
           <form onSubmit={handleSubmit}>
             <div className="mb-6">
-              <h1 className="text-xl font-bold mb-2">ISIM :</h1>
+              <h1 className="text-xl font-bold mb-2">İSİM :</h1>
               <input
                 type="text"
                 id="name"
@@ -40,7 +40,7 @@ const Form = () => {
               />
             </div>
             <div className="mb-6">
-              <h1 className="text-xl font-bold mb-2">SOY ISIM :</h1>
+              <h1 className="text-xl font-bold mb-2">SOY İSİM :</h1>
               <input
                 type="text"
                 id="surname"
@@ -51,7 +51,7 @@ const Form = () => {
               />
             </div>
             <div className="mb-6">
-              <h1 className="text-xl font-bold mb-2">E MAIL :</h1>
+              <h1 className="text-xl font-bold mb-2">E MAİL :</h1>
               <input
                 type="email"
                 id="email"
@@ -62,7 +62,7 @@ const Form = () => {
               />
             </div>
             <div className="mb-6">
-              <h1 className="text-xl font-bold mb-2">MESSAGE :</h1>
+              <h1 className="text-xl font-bold mb-2">MESAJ :</h1>
               <textarea
                 id="message"
                 name="message"
