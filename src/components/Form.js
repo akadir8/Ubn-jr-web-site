@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Form = () => {
+const Form = ({ onClose }) => {
   const [formData, setFormData] = useState({
     name: "",
     surname: "",
@@ -27,6 +27,13 @@ const Form = () => {
         <span className="hidden sm:inline-block sm:align-middle sm:h-screen"></span>
         &#8203;
         <div className="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
+          <button
+            type="button"
+            className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
+            onClick={onClose}
+          >
+            X
+          </button>
           <form onSubmit={handleSubmit}>
             <div className="mb-6">
               <h1 className="text-xl font-bold mb-2">İSİM :</h1>
