@@ -2,13 +2,17 @@
 import React from 'react';
 import HomePage from './HomePage';
 import jsonData from "./data.json";
+import Form from './Form';
 
 /* activeLink adlı bir özellik alır. Bu özellik, Navbar bileşenindeki tıklanan bağlantının sırasını temsil eder. Eğer activeLink sıfırsa, HomePage bileşenini döndürür. */
 function Page({ activeLink }) {
   if (activeLink === 0) {
     return <HomePage />;
     /* Aksi takdirde, link adlı bir değişken tanımlanır ve tıklanan bağlantının adını ve adresini içeren bir nesne seçilir. Bu nesne, daha sonra jsonData adlı bir dosyadan ilgili bilgileri almak için kullanılacaktır. */
-  } else{
+  }else if (activeLink === 5){
+    return <Form/>
+  }
+   else{
     const link = [
       {name:"Web", link:"/"},
       {name:"Siber", link:"/"},
