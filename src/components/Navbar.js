@@ -1,12 +1,15 @@
 import React from "react";
 import logo from "./logo2.png";
-import Button from "./Button";
+import Button from "./ButonPage";
 /* 1-Navbar bileşeni bir fonksiyonel bileşendir ve bir dizi prop alır. Bu props'lar arasında:
 2-activeLink: kullanıcının şu anda seçili olan bağlantıyı belirlemek için kullanılan bir sayı (dizi indeksi)
 setActiveLink: kullanıcının seçtiği bağlantıyı güncellemek için bir fonksiyon
 Links: navbar'da gösterilen bağlantıların bir dizisi */
 function Navbar(props) {
   const { activeLink, setActiveLink, Links } = props;
+  const handleClick = () => {
+    setActiveLink("contact");
+  };
 
   return (
     /* Bileşen bir <div> öğesi ile başlar ve ardından bir navbar bileşeni içeren bir <div> öğesi vardır. Navbar bileşeni, Bootstrap benzeri bir görünüm sağlamak için birkaç CSS sınıfı kullanır */
