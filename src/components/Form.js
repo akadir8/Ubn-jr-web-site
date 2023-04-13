@@ -59,8 +59,11 @@ const Form = ({ onClose }) => {
                 value={formData.name}
                 onChange={handleChange}
                 className="border border-gray-400 p-2 w-full rounded-md"
-                placeholder="İsminizi Giriniz..."
+                placeholder="İsminizi girin..."
               />
+
+
+
             </div>
             <div className="mb-6">
               <h1 className="text-xl font-bold mb-2">SOY İSİM :</h1>
@@ -69,7 +72,7 @@ const Form = ({ onClose }) => {
                 type="text"
                 id="surname"
                 name="surname"
-                value={formData.surname}
+                value={formData.name}
                 onChange={handleChange}
                 className="border border-gray-400 p-2 w-full rounded-md"
                 placeholder="Soyisminizi Giriniz..."
@@ -81,22 +84,25 @@ const Form = ({ onClose }) => {
                 type="email"
                 id="email"
                 name="email"
-                value={formData.email}
+                value={formData.name}
                 onChange={handleChange}
                 className="border border-gray-400 p-2 w-full rounded-md"
-                placeholder="E-mail'inizi Giriniz..."
+                placeholder="Mailinizi girin..."
               />
+
             </div>
             <div className="mb-6">
               <h1 className="text-xl font-bold mb-2">MESAJ :</h1>
               <textarea
+
                 id="message"
                 name="message"
-                value={formData.message}
+                value={formData.name}
                 onChange={handleChange}
                 className="border border-gray-400 p-2 w-full rounded-md"
-                placeholder="Mesajınızı Giriniz..."
+                placeholder="Mesajınızı girin..."
               />
+
             </div>
             <div className="text-right">
               <button
