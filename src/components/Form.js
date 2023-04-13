@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Toast from "./Toast";
 
 const Form = ({ onClose }) => {
   const [formData, setFormData] = useState({
@@ -7,6 +8,7 @@ const Form = ({ onClose }) => {
     email: "",
     message: "",
   });
+  const [showToast, setShowToast] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,9 +18,21 @@ const Form = ({ onClose }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
+    setShowToast(true);
+  };
+
+  const handleToastClose = () => {
+    setShowToast(false);
   };
 
   return (
+    <div className="fixed z-50 inset-0 overflow-y-auto">
+    {showToast && (
+      <Toast
+        message="Bilgileriniz başarıyla gönderildi!"
+        onClose={handleToastClose}
+      />
+    )}
     <div className="fixed z-50 inset-0 overflow-y-auto">
       <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
         <div className="fixed inset-0 transition-opacity">
@@ -95,6 +109,7 @@ const Form = ({ onClose }) => {
           </form>
         </div>
       </div>
+    </div>
     </div>
   );
 };
