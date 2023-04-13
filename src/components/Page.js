@@ -1,16 +1,21 @@
-/* Bu kod, Page adlı bir bileşen tanımlar */
-import React from 'react';
+import React, { useState } from 'react';
 import HomePage from './HomePage';
 import jsonData from "./data.json";
 import Form from './Form';
 
 /* activeLink adlı bir özellik alır. Bu özellik, Navbar bileşenindeki tıklanan bağlantının sırasını temsil eder. Eğer activeLink sıfırsa, HomePage bileşenini döndürür. */
 function Page({ activeLink }) {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const handleClose = () => {
+    setIsOpen(false);
+  }
+  
   if (activeLink === 0) {
     return <HomePage />;
     /* Aksi takdirde, link adlı bir değişken tanımlanır ve tıklanan bağlantının adını ve adresini içeren bir nesne seçilir. Bu nesne, daha sonra jsonData adlı bir dosyadan ilgili bilgileri almak için kullanılacaktır. */
   }else if (activeLink === 5){
-    return <Form/>
+    return isOpen && <Form onClose={handleClose} />
   }
    else{
     const link = [
