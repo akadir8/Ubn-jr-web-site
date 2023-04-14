@@ -1,33 +1,72 @@
-/* Bu kod, bir React bileşeni olan Toast'ı oluşturur. Toast, belirtilen mesajı gösteren ve ardından belirli bir süre sonra kapatılan bir küçük bildirim kutusudur. */
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-/* useState, bileşenin state'ini tutmak için kullanılır. "show" adlı bir state tanımlanır ve başlangıçta "true" olarak ayarlanır. */
-const Toast = ({ message, onClose }) => {
+const Toast = ({ message }) => {
   const [show, setShow] = useState(true);
 
-  /* useEffect, bileşenin yaşam döngüsünü takip etmek için kullanılır. Bileşen her yüklendiğinde, 3 saniye sonra bildirim kutusunu kapatmak için bir zamanlayıcı oluşturulur. Bu etki, bileşenin kapatılması gerektiği zaman bileşenin "onClose" prop'ını çağıran "return" bloğu ile temizlenir. */
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShow(false);
-      onClose();
-    }, 3000);
+  setTimeout(() => {
+    setShow(false);
+  }, 4000);
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [onClose]);
-
-  /* Render metodu, bir <div> öğesi içinde belirtilen mesajı gösterir. "show" değişkeni kullanılarak, belirli bir animasyonlu geçişle bileşenin görünür veya gizlenir hale getirilmesi sağlanır. */
   return (
     <div
-      className={`fixed bottom-0 right-0 m-8 bg-gray-800 text-white px-4 py-2 rounded-md transition-all duration-500 ${
-        show ? "opacity-100 visible" : "opacity-0 invisible"
+      className={`fixed inset-0 flex items-end justify-center px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end ${
+        show ? "" : "hidden"
       }`}
     >
-      <p>{message}</p>
+      <div
+        className="max-w-sm w-full bg-green-600 shadow-lg rounded-lg pointer-events-auto"
+        onClick={() => setShow(false)}
+      >
+        <div className="rounded-lg shadow-xs overflow-hidden">
+          <div className="p-4">
+            <div className="flex items-start">
+              <div className="flex-shrink-0">
+                <svg
+                  className="h-6 w-6 text-white"
+                  stroke="currentColor"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+              <div className="ml-3 w-0 flex-1 pt-0.5">
+                <p className="text-sm leading-5 font-medium text-white">
+                  {message}
+                </p>
+              </div>
+              <div className="ml-4 flex-shrink-0 flex">
+                <button
+                  onClick={() => setShow(false)}
+                  className="inline-flex text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                >
+                  <span className="sr-only">Close</span>
+                  <svg
+                    className="h-5 w-5"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 8.586L3.707 2.293a1 1 0 00-1.414 1.414L8.586 10l-6.293 6.293a1 1 0 001.414 1.414L10 11.414l6.293 6.293a1 1 0 001.414-1.414L11.414 10l6.293-6.293a1 1 0 00-1.414-1.414L10 8.586z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
 export default Toast;
-/* Bu kod, genellikle bir işlem tamamlandığında kullanıcıya geri bildirim vermek için kullanılır. Örneğin, bir form gönderildiğinde veya bir işlem başarılı bir şekilde tamamlandığında, Toast mesajı kullanıcılara geri bildirim sağlayabilir. */
