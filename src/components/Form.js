@@ -10,7 +10,6 @@ const Form = ({onClose}) => {
   });
   const [showToast, setShowToast] = useState(false);
 
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
@@ -21,17 +20,9 @@ const Form = ({onClose}) => {
     console.log(formData);
     setShowToast(true);
   };
-
   return (
     <div className="fixed z-50 inset-0 overflow-y-auto">
-      {showToast && (
-<Toast
-       message="Bilgileriniz başarıyla gönderildi"
-       duration={4000}
-       backgroundColor="#34D399"
-       icon="check"
-     />
-)}
+      {showToast && <Toast message="Bilgileriniz başarıyla gönderildi." />}
       <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
         <div className="fixed inset-0 transition-opacity">
           <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
