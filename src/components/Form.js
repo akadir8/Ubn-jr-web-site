@@ -19,7 +19,16 @@ const Form = ({onClose}) => {
     e.preventDefault();
     console.log(formData);
     setShowToast(true);
+    setFormData({
+      name: "",
+      surname: "",
+      email: "",
+      message: "",
+    });
   };
+  setTimeout(() => {
+    setShowToast(false);
+  }, 3000);
   return (
     <div className="fixed z-50 inset-0 overflow-y-auto">
       {showToast && <Toast message="Bilgileriniz başarıyla gönderildi." />}
