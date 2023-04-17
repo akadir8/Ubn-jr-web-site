@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import Toast from "./Toast";
 
-const Form = ({onClose}) => {
+const Form = ({toggleForm, toggleToast}) => {
   const [formData, setFormData] = useState({
     name: "",
     surname: "",
     email: "",
     message: "",
   });
-  const [showToast, setShowToast] = useState(false);
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,7 +17,9 @@ const Form = ({onClose}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    setShowToast(true);
+    toggleToast()
+    toggleForm()
+    
     setFormData({
       name: "",
       surname: "",
@@ -26,12 +27,10 @@ const Form = ({onClose}) => {
       message: "",
     });
   };
-  setTimeout(() => {
-    setShowToast(false);
-  }, 3000);
+  
   return (
     <div className="fixed z-50 inset-0 overflow-y-auto">
-      {showToast && <Toast message="Bilgileriniz başarıyla gönderildi." />}
+      
       <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
         <div className="fixed inset-0 transition-opacity">
           <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
@@ -43,7 +42,7 @@ const Form = ({onClose}) => {
             <button
               type="button"
               className="inline-flex justify-center py-1 px-2 border border-transparent shadow-sm text-xs font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-              onClick={onClose}
+              onClick={toggleForm}
             >
               X
             </button>

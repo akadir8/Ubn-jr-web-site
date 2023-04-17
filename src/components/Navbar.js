@@ -1,9 +1,25 @@
 import React from "react";
 import logo from "./logo2.png";
 import Button from "./ButonPage";
+import Form from "./Form";
+import Toast  from "./Toast";
  
 function Navbar(props) {
   const { activeLink, setActiveLink, Links } = props;
+  const [isOpen, setIsOpen] = React.useState(false);
+  const [showToast, setShowToast] = React.useState(false);
+
+  const toggleForm = () => setIsOpen(!isOpen)
+
+  const toggleToast = () => {
+    setShowToast(true);
+
+    setTimeout(() => {
+      setShowToast(false);
+    }, 3000);
+  }
+
+
   return (
     <div className="bg-[#E8D5C4] w-full h-screen">
       <div className="shadow-md w-full fixed top-0 left-0">
@@ -29,11 +45,13 @@ function Navbar(props) {
               </li>
             ))}
             <li className="md:ml-8">
-              <Button setActiveLink={setActiveLink}/>
+              <Button showForm={toggleForm}/>
             </li>
           </ul>
         </div>
       </div>
+      {isOpen && <Form toggleForm={toggleForm} toggleToast={toggleToast} /> }
+      {showToast && <Toast message="Bilgileriniz başarıyla gönderildi." />}
     </div>
   );
 }
