@@ -7,8 +7,7 @@ function Page({ activeLink }) {
   if (activeLink === 0) {
     return <HomePage />;
     /* Aksi takdirde, link adlı bir değişken tanımlanır ve tıklanan bağlantının adını ve adresini içeren bir nesne seçilir. Bu nesne, daha sonra jsonData adlı bir dosyadan ilgili bilgileri almak için kullanılacaktır. */
-  }
-   else{
+  }else{
     const link = [
       {name:"Web", link:"/"},
       {name:"Siber", link:"/"},
