@@ -4,6 +4,10 @@
 @tailwind utilities;
 
 body {
-    background-color: #3A98B9;
+    background-color: rgb(223, 235, 238);
 
+}
+
+Footer {
+    background-color: rgb(223, 235, 238) ;
 }
