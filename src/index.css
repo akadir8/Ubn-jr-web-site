@@ -10,4 +10,18 @@ body {
 
 Footer {
     background-color: rgb(223, 235, 238) ;
+
+}
+
+#navBar{
+    background-color: rgba(210, 255, 255, 0.422) ;
+}
+
+#buton{
+    background-color: rgb(30, 147, 176) ;
+    cursor: pointer;
+}
+
+#buton:hover{
+    background-color: #1C315E;
 }
