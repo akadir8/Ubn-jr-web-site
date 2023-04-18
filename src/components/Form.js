@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 /* useState() hook'u, bileşenin içindeki durum (state) için bir değişken oluşturur. Bu durum değişkeni, bileşenin yeniden oluşturulması sırasında bile önceki değerini tutar. Bu durum değişkeni, bileşenin hali hazırdaki durumunun öğelerini içeren bir nesne olarak başlatılır. */
-const Form = ({toggleForm, toggleToast}) => {
+const Form = ({ toggleForm, toggleToast }) => {
   /* Bu kodlar, bir React bileşeni olan bir formu temsil eder. Form, kullanıcıların ad, soyad, e-posta ve bir mesaj girerek bir iletişim formu göndermelerine olanak tanır. */
   const [formData, setFormData] = useState({
     name: "",
@@ -8,20 +8,20 @@ const Form = ({toggleForm, toggleToast}) => {
     email: "",
     message: "",
   });
-  
-/* handleChange() fonksiyonu, form öğelerinin herhangi birinde bir değişiklik olduğunda çağrılır. Bu fonksiyon, formdaki öğelerin mevcut değerlerini, formData durumundaki nesneye ekler veya günceller. */
+
+  /* handleChange() fonksiyonu, form öğelerinin herhangi birinde bir değişiklik olduğunda çağrılır. Bu fonksiyon, formdaki öğelerin mevcut değerlerini, formData durumundaki nesneye ekler veya günceller. */
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
   };
-/* handleSubmit() fonksiyonu, form gönderildiğinde çağrılır. Bu fonksiyon, formun verilerini console'a yazdırır ve ardından kullanıcının formun gönderildiğine dair bir geri bildirim almasını sağlar. Son olarak, setFormData() fonksiyonu, formu sıfırlar ve başlangıç ​​değerlerine geri döndürür. */
+  /* handleSubmit() fonksiyonu, form gönderildiğinde çağrılır. Bu fonksiyon, formun verilerini console'a yazdırır ve ardından kullanıcının formun gönderildiğine dair bir geri bildirim almasını sağlar. Son olarak, setFormData() fonksiyonu, formu sıfırlar ve başlangıç ​​değerlerine geri döndürür. */
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
     /* toggleForm() ve toggleToast() fonksiyonları, bileşenin üst düzey bileşeninde tanımlanan ve bu bileşenin durumunu değiştiren işlevlerdir. Bu işlevler, formun gönderildiğine veya iptal edildiğine dair bir geri bildirim sağlamak için kullanılır. */
-    toggleToast()
-    toggleForm()
-    
+    toggleToast();
+    toggleForm();
+
     setFormData({
       name: "",
       surname: "",
@@ -29,10 +29,9 @@ const Form = ({toggleForm, toggleToast}) => {
       message: "",
     });
   };
-  
+
   return (
     <div className="fixed z-50 inset-0 overflow-y-auto">
-      
       <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
         <div className="fixed inset-0 transition-opacity">
           <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
@@ -41,7 +40,7 @@ const Form = ({toggleForm, toggleToast}) => {
         &#8203;
         <div className="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
           {/* Bu kod bir kapatma düğmesi oluşturur. onClick özelliği, düğmeye tıklandığında çağrılacak bir fonksiyonu belirtir. Bu örnekte, toggleForm fonksiyonu çağrılır ve iletişim formu kapatılır. button elementi, düğmeyi oluşturur ve görüntüsü için bazı CSS sınıflarını kullanır. */}
-        <div className="text-right">
+          <div className="text-right">
             <button
               type="button"
               className="inline-flex justify-center py-1 px-2 border border-transparent shadow-sm text-xs font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
@@ -49,8 +48,8 @@ const Form = ({toggleForm, toggleToast}) => {
             >
               X
             </button>
-            </div>
-            {/* Bu kod, bir HTML form elemanı oluşturur ve onSubmit özelliği, form gönderildiğinde çağrılacak bir fonksiyonu belirtir. Bu örnekte, handleSubmit fonksiyonu çağrılır ve form verileri işlenir. Form elemanı içinde, bir dizi input elementi ve bir textarea elementi yer alır, bu elementler kullanıcının bilgilerini girmesi için tasarlanmıştır. */}
+          </div>
+          {/* Bu kod, bir HTML form elemanı oluşturur ve onSubmit özelliği, form gönderildiğinde çağrılacak bir fonksiyonu belirtir. Bu örnekte, handleSubmit fonksiyonu çağrılır ve form verileri işlenir. Form elemanı içinde, bir dizi input elementi ve bir textarea elementi yer alır, bu elementler kullanıcının bilgilerini girmesi için tasarlanmıştır. */}
           <form onSubmit={handleSubmit}>
             <div className="mb-6">
               {/* Bu React kodu, bir formda "İSİM" etiketi ile bir input alanı oluşturuyor.
