@@ -10,7 +10,7 @@ function Button({ showForm }) {
       onClick={showForm}
       className="ml-56 rounded-full py-2 px-3 text-xs font-bold tracking-wider  text-white hover:bg-cyan-700 duration-100"
     >
-      Bize katılmak ister misiniz ?
+      Bizimle iletişime geçin ?
     </button>
   );
 }

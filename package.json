@@ -17,6 +17,7 @@
     "react-simple-typewriter": "^5.0.1",
     "react-text-typist": "^1.1.7",
     "react-toastify": "^9.1.2",
+    "react-tooltip": "^5.11.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
