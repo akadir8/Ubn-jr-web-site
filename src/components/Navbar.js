@@ -47,7 +47,7 @@ function Navbar(props) {
 
           {/* Bu kod, bir liste elementi oluşturur ve listenin her bir öğesi, Links adlı bir dizi içindeki her bir öğe için bir düğme oluşturur. Links dizisi, Navbar bileşenine aktarılan bir özelliktir ve her bir öğesi bir bağlantı adını ve bağlantıyı temsil eden bir URL adresini içerir. */}
           <ul className=" md:flex md:items-center">
-            {Links.map((link, index) => (
+          {Links.map((link, index) => (
               <li key={link.name} className="md:ml-8 text-xl">
                 <button
                   /* Her düğme öğesi, onClick olayına sahip bir düğme oluşturur. onClick olayı, bağlantıların seçili olup olmadığını belirleyen activeLink öğesini günceller. Düğme öğeleri ayrıca CSS sınıfları eklerler, böylece seçilen bağlantı belirgin hale gelir ve diğerleri daha soluk hale gelir. Son olarak, Navbar bileşeninin alt kısmında bir başka bileşen olan Button bileşeni bulunur ve bu bileşenin görüntülenmesi, showForm adlı bir fonksiyon çağrısı tarafından kontrol edilir. */
