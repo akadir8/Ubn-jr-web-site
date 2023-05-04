@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 /* useState() hook'u, bileşenin içindeki durum (state) için bir değişken oluşturur. Bu durum değişkeni, bileşenin yeniden oluşturulması sırasında bile önceki değerini tutar. Bu durum değişkeni, bileşenin hali hazırdaki durumunun öğelerini içeren bir nesne olarak başlatılır. */
 const Form = ({ toggleForm, toggleToast }) => {
   /* Bu kodlar, bir React bileşeni olan bir formu temsil eder. Form, kullanıcıların ad, soyad, e-posta ve bir mesaj girerek bir iletişim formu göndermelerine olanak tanır. */
@@ -17,7 +18,19 @@ const Form = ({ toggleForm, toggleToast }) => {
   /* handleSubmit() fonksiyonu, form gönderildiğinde çağrılır. Bu fonksiyon, formun verilerini console'a yazdırır ve ardından kullanıcının formun gönderildiğine dair bir geri bildirim almasını sağlar. Son olarak, setFormData() fonksiyonu, formu sıfırlar ve başlangıç ​​değerlerine geri döndürür. */
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    console.log("önyüz", formData);
+    axios
+      .post("http://localhost:5000/api/form", formData, {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json",
+        },
+      })
+      .then((response) => console.log("arkayüz", response.data))
+      .catch((error) => {
+        console.log("AxiosError:", error.message);
+        console.log("AxiosError response:", error.response.data);
+      });
     /* toggleForm() ve toggleToast() fonksiyonları, bileşenin üst düzey bileşeninde tanımlanan ve bu bileşenin durumunu değiştiren işlevlerdir. Bu işlevler, formun gönderildiğine veya iptal edildiğine dair bir geri bildirim sağlamak için kullanılır. */
     toggleToast();
     toggleForm();
