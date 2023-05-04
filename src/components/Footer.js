@@ -3,7 +3,7 @@ function Footer(){
     return (
         /* className özelliği, CSS sınıflarını tanımlamak için kullanılır. Bu örnekte, <div> etiketi <p> etiketi içerisine css özellikerimizi tanımladık. */
         <div className="font-nunito">
-            <p className="text-sm font-bold text-center ">Copyright © 2023 Ubn-Jr. All Right Reserved</p>
+            <p className="text-sm font-bold text-center">Copyright © 2023 Ubn-Jr. All Right Reserved</p>
 
         </div>
 )
