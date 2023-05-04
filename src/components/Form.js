@@ -18,7 +18,7 @@ const Form = ({ toggleForm, toggleToast }) => {
   /* handleSubmit() fonksiyonu, form gönderildiğinde çağrılır. Bu fonksiyon, formun verilerini console'a yazdırır ve ardından kullanıcının formun gönderildiğine dair bir geri bildirim almasını sağlar. Son olarak, setFormData() fonksiyonu, formu sıfırlar ve başlangıç ​​değerlerine geri döndürür. */
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("önyüz", formData);
+  
     axios
       .post("http://localhost:5000/api/form", formData, {
         headers: {
@@ -26,15 +26,14 @@ const Form = ({ toggleForm, toggleToast }) => {
           "Content-Type": "application/json",
         },
       })
-      .then((response) => console.log("arkayüz", response.data))
+      .then((response) => console.log("data:", response.data))
       .catch((error) => {
         console.log("AxiosError:", error.message);
         console.log("AxiosError response:", error.response.data);
       });
-    /* toggleForm() ve toggleToast() fonksiyonları, bileşenin üst düzey bileşeninde tanımlanan ve bu bileşenin durumunu değiştiren işlevlerdir. Bu işlevler, formun gönderildiğine veya iptal edildiğine dair bir geri bildirim sağlamak için kullanılır. */
     toggleToast();
     toggleForm();
-
+  
     setFormData({
       name: "",
       surname: "",
@@ -42,6 +41,7 @@ const Form = ({ toggleForm, toggleToast }) => {
       message: "",
     });
   };
+  
 
   return (
     <div className="fixed z-50 inset-0 overflow-y-auto">
@@ -77,6 +77,7 @@ Bu şekilde oluşturulan form alanı, kullanıcının "İSİM" bilgisini girmesi
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
+                required
                 className="border border-gray-400 p-2 w-full rounded-md"
               />
             </div>
@@ -89,6 +90,7 @@ Bu şekilde oluşturulan form alanı, kullanıcının "İSİM" bilgisini girmesi
                 name="surname"
                 value={formData.surname}
                 onChange={handleChange}
+                required
                 className="border border-gray-400 p-2 w-full rounded-md"
               />
             </div>
@@ -101,6 +103,7 @@ Bu şekilde oluşturulan form alanı, kullanıcının "İSİM" bilgisini girmesi
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
+                required
                 className="border border-gray-400 p-2 w-full rounded-md"
               />
             </div>
@@ -112,6 +115,7 @@ Bu şekilde oluşturulan form alanı, kullanıcının "İSİM" bilgisini girmesi
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
+                required
                 className="border border-gray-400 p-2 w-full rounded-md"
               />
             </div>
