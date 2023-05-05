@@ -20,16 +20,12 @@ const Form = ({ toggleForm, toggleToast }) => {
     e.preventDefault();
   
     axios
-      .post("http://localhost:5000/api/form", formData, {
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Content-Type": "application/json",
-        },
+      .post('http://localhost:5000/api/form', formData)
+      .then((response) => {
+        console.log(response);
       })
-      .then((response) => console.log("data:", response.data))
       .catch((error) => {
-        console.log("AxiosError:", error.message);
-        console.log("AxiosError response:", error.response.data);
+        console.log(error);
       });
     toggleToast();
     toggleForm();
