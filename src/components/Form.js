@@ -22,7 +22,7 @@ const Form = ({ toggleForm, toggleToast }) => {
     axios
       .post('http://localhost:5000/api/form', formData)
       .then((response) => {
-        console.log(response);
+        console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
