@@ -1,6 +1,7 @@
 import HomePage from './HomePage';
 import jsonData from "./data.json";
 import SocialMedia from "./SocialMedia";
+import Card from './Cards';
 
 /* activeLink adlı bir özellik alır. Bu özellik, Navbar bileşenindeki tıklanan bağlantının sırasını temsil eder. Eğer activeLink sıfırsa, HomePage bileşenini döndürür. */
 function Page({ activeLink }) {
@@ -20,6 +21,7 @@ function Page({ activeLink }) {
     const { header, content } = jsonData[link.name.toLowerCase()];
 
     return (
+      <>
       /* Son olarak, bileşen, header ve content değişkenlerini kullanarak bir div içinde başlık ve içeriği görüntüler.  */
       <div className='hidden lg:flex flex-col gap-5 rounded-md shadow-lg shadow-[#00A8CC] absolute top-56 m-auto left-10 bg-white p-6 h-fit w-1/3'>
         <h2 className='text-4xl font-bold text-cyan-700'>{header}</h2>
@@ -28,6 +30,12 @@ function Page({ activeLink }) {
         <SocialMedia/>
         </p>
       </div>
+      <div>
+        <Card position={{top:"180px", right:"600px"}}/>
+        <Card position={{top:"180px", right:"350px"}}/>
+        <Card position={{top:"180px", right:"100px"}}/>
+      </div>
+      </>
     );
   }
 }
