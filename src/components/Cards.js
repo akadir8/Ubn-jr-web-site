@@ -30,9 +30,7 @@ function Card(props) {
       </div>
       <Modal isOpen={showModal} onRequestClose={toggleModal} contentLabel="Card Content">
         <div className="modal-content">
-          <div className="modal-header text-center">
-            <h1 className='text-xl font-bold'>Lorem, ipsum.</h1>
-            <div className='text-right'>
+        <div className='text-right'>
             <button
               type="button"
               className="inline-flex justify-center py-1 px-2 border border-transparent shadow-sm text-xs font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
@@ -41,7 +39,10 @@ function Card(props) {
               X
             </button>
             </div>
+          <div className="modal-header text-center">
+            <h1 className='text-xl font-bold'>Lorem, ipsum.</h1>
           </div>
+          <br />
           <div className="modal-body">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a eros vitae nunc bibendum suscipit ac eget purus. Sed ac eros nibh. In aliquam augue vel est fringilla vehicula. Proin eu leo quam. Etiam porta sem malesuada magna mollis euismod.</p>
           </div>
