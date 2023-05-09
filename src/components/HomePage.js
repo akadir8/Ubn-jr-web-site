@@ -1,6 +1,7 @@
 import logo from "./logo1.png";
 import SocialMedia from "./SocialMedia";
 import Typist from "react-text-typist";
+import Card from "./Cards";
 /* Bu React kodunda bir ana sayfa (HomePage) bileşeni oluşturulmuştur. Bu bileşen, üç farklı öğeden oluşur: */
 function HomePage() {
   return (
@@ -41,6 +42,9 @@ function HomePage() {
         </p>
         <SocialMedia/>
         {/* Burda SocialMedia.js klsöründeki oluşturduğumuz ikonları çağrıyoruz*/}
+      </div>
+      <div>
+        <Card/>
       </div>
     </>
   );

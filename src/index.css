@@ -26,3 +26,21 @@ Footer {
 #buton:hover{
     background-color: #569DAA;
 }
+
+.card {
+    width: 100%;
+    max-width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #00A8CC;
+  }
+  
+  .card-content {
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  

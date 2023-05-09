@@ -8,7 +8,7 @@ function Button({ showForm }) {
     <button id="buton"
     /* onClick olayı, düğme öğesine tıklandığında çağrılacak olan bir fonksiyonu belirtir. */
       onClick={showForm}
-      className="ml-56 rounded-full py-2 px-3 text-xs font-bold tracking-wider  text-white hover:bg-cyan-700 duration-100"
+      className="ml-56 rounded-full py-2 px-3 text-xs font-bold tracking-wider text-white hover:bg-cyan-700 duration-100"
     >
       Bizimle iletişime geçin ?
     </button>
