@@ -33,6 +33,9 @@ function Page({ activeLink }) {
         <Card position={{top:"180px", right:"600px"}}/>
         <Card position={{top:"180px", right:"350px"}}/>
         <Card position={{top:"180px", right:"100px"}}/>
+        <Card position={{top:"380px", right:"100px"}}/>
+        <Card position={{top:"380px", right:"350px"}}/>
+        <Card position={{top:"380px", right:"600px"}}/>
       </div>
       </>
     );
