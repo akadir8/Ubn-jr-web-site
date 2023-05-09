@@ -43,7 +43,8 @@ function HomePage() {
         <SocialMedia/>
         {/* Burda SocialMedia.js klsöründeki oluşturduğumuz ikonları çağrıyoruz*/}
       </div>
-      <div>
+      <div className="flex justify-end space-x-64">
+        <Card/>
         <Card/>
       </div>
     </>
