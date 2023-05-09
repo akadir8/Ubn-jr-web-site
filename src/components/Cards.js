@@ -1,16 +1,21 @@
 import { useState } from 'react';
 import Modal from 'react-modal';
 
-function Card() {
+function Card(props) {
   const [showModal, setShowModal] = useState(false);
 
   function toggleModal() {
     setShowModal(!showModal);
   }
 
+  const cardStyle = {
+    position: 'absolute',
+    ...props.position
+  };
+
   return (
     <>
-      <div className="card fixed bottom-10 left-10 bg-white p-4 border border-gray-300 rounded-lg cursor-pointer" onClick={toggleModal}>
+      <div className="card bg-white p-4 border border-gray-300 rounded-lg cursor-pointer" style={cardStyle} onClick={toggleModal}>
         <h2 className='text-left font-bold'>Lorem, ipsum.</h2>
         <div className="card-content" style={{ maxHeight: showModal ? 'none' : '50px', overflow: 'hidden' }}>
           <p className='text-left'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a eros vitae nunc bibendum suscipit ac eget purus. Sed ac eros nibh. In aliquam augue vel est fringilla vehicula. Proin eu leo quam. Etiam porta sem malesuada magna mollis euismod.</p>

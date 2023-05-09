@@ -6,7 +6,7 @@ import Card from "./Cards";
 function HomePage() {
   return (
     <>
-    {/* Bir logo resmi (logo1.png) - bu resim, sayfanın sağ alt köşesinde animasyonlu bir şekilde zıplar. */}
+      {/* Bir logo resmi (logo1.png) - bu resim, sayfanın sağ alt köşesinde animasyonlu bir şekilde zıplar. */}
       <div>
         <img
           className="animate-bounce absolute bottom-20 right-20 lg:left-0 mx-auto h-5/6 object-cover"
@@ -29,7 +29,10 @@ function HomePage() {
           loop
         />
       </div>
-      <div id="myDiv" className="hidden lg:flex flex-col gap-5 rounded-md shadow-lg shadow-[#00A8CC] absolute top-0 bottom-0 m-auto right-10 bg-white p-6 h-fit w-1/3">
+      <div
+        id="myDiv"
+        className="hidden lg:flex flex-col gap-5 rounded-md shadow-lg shadow-[#00A8CC] absolute top-0 bottom-0 m-auto right-10 bg-white p-6 h-fit w-1/3"
+      >
         {/* Bir diyalog kutusu - "Lorem, ipsum dolor" başlığı ve açıklama metni ile birlikte, sayfanın sağ tarafında yer alır. Bu kutu, "SocialMedia" bileşeni kullanılarak sosyal medya bağlantılarını içerir. Bu kutu ayrıca, büyük ekranlarda kullanıcı tarafından görüntülenebilir, ancak küçük ekranlarda gizlenebilir. */}
         <h1 className="text-4xl font-bold text-cyan-700">
           Lorem, ipsum dolor.
@@ -40,12 +43,12 @@ function HomePage() {
           deleniti vel, adipisci neque libero, ea eius repellendus. Ipsa,
           inventore perferendis!
         </p>
-        <SocialMedia/>
+        <SocialMedia />
         {/* Burda SocialMedia.js klsöründeki oluşturduğumuz ikonları çağrıyoruz*/}
       </div>
       <div className="flex justify-end space-x-64">
-        <Card/>
-        <Card/>
+        <Card position={{ bottom: "50px", left: "50px",  }} />
+        <Card position={{ bottom: "50px", left: "50px" }} />
       </div>
     </>
   );
