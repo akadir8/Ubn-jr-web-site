@@ -47,7 +47,7 @@ function HomePage() {
         {/* Burda SocialMedia.js klsöründeki oluşturduğumuz ikonları çağrıyoruz*/}
       </div>
       <div className="flex justify-end space-x-64">
-        <Card position={{ bottom: "50px", left: "50px",  }} />
+        <Card position={{ bottom: "50px", left: "50px"}}/>
         <Card position={{ bottom: "50px", left: "50px" }} />
       </div>
     </>

@@ -11,7 +11,7 @@ function Page({ activeLink }) {
     /* Aksi takdirde, link adlı bir değişken tanımlanır ve tıklanan bağlantının adını ve adresini içeren bir nesne seçilir. Bu nesne, daha sonra jsonData adlı bir dosyadan ilgili bilgileri almak için kullanılacaktır. */
   }else{
     const link = [
-      {name:"Web", link:"/"},
+      {name:"Yazılım", link:"/"},
       {name:"Siber", link:"/"},
       {name:"Tasarım", link:"/"},
       {name:"Elektronik", link:"/"},
@@ -30,12 +30,9 @@ function Page({ activeLink }) {
         </p>
       </div>
       <div>
-        <Card position={{top:"180px", right:"600px"}}/>
-        <Card position={{top:"180px", right:"350px"}}/>
-        <Card position={{top:"180px", right:"100px"}}/>
-        <Card position={{top:"380px", right:"100px"}}/>
-        <Card position={{top:"380px", right:"350px"}}/>
-        <Card position={{top:"380px", right:"600px"}}/>
+        <Card position={{top:"220px", right:"650px"}}/>
+        <Card position={{top:"220px", right:"350px"}}/>
+        <Card position={{top:"220px", right:"50px"}}/>
       </div>
       </>
     );

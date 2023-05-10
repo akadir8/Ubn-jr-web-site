@@ -12,7 +12,7 @@ function App() {
   /* Links adında bir dizi tanımlandı ve bu dizide her biri bir bağlantı adını ve URL'sini içeren beş nesne eklendi. */
   const Links = [
     {name:"Anasayfa",link:"/"},
-    {name:"Web",link:"/"},
+    {name:"Yazılım",link:"/"},
     {name:"Siber",link:"/"},
     {name:"Tasarım",link:"/"},
     {name:"Elektronik",link:"/"},

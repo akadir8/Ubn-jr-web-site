@@ -1,7 +1,7 @@
 {
-  "web": {
-    "header": "Web Geliştirme",
-    "content": "Web geliştirme, internet üzerinde çalışan web siteleri ve uygulamaları oluşturma sürecidir. Bu süreç, birçok farklı teknoloji, araç ve dil kullanılarak gerçekleştirilir. Örneğin, HTML, CSS ve JavaScript gibi temel web teknolojileri kullanılarak web siteleri tasarlanır ve kodlanır. Ayrıca, web geliştiriciler, sunucu tarafı programlama dilleri ve veritabanı yönetim sistemleri kullanarak web uygulamalarını oluştururlar. Web geliştirme, her geçen gün daha da önem kazanan bir alandır ve internetin hayatımızda giderek daha fazla yer kaplamasıyla birlikte bu önemli artmaya devam edecektir."
+  "yazılım": {
+    "header": "Yazılım",
+    "content": "Yazılım, bilgisayarların ve diğer dijital cihazların çalışmasını sağlayan programlardır. Bu programlar, insanların işlerini daha verimli hale getirmek, işlemleri otomatikleştirmek ve hayatı daha kolay hale getirmek için tasarlanır. Yazılım geliştiricileri, birçok farklı programlama dilini kullanarak yazılım oluştururlar. Yazılım, her sektörde kullanılmakta ve gün geçtikçe gelişerek daha da önem kazanmaktadır. Herhangi bir sektörde verimliliği artırmak, işlemleri kolaylaştırmak veya farklı bir ihtiyaca cevap vermek için yazılım kullanımı kaçınılmaz hale gelmiştir."
   },
   "siber": {
     "header": "Siber",
