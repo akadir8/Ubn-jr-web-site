@@ -30,9 +30,9 @@ function Page({ activeLink }) {
         </p>
       </div>
       <div>
-        <Card position={{top:"220px", right:"650px"}}/>
-        <Card position={{top:"220px", right:"350px"}}/>
-        <Card position={{top:"220px", right:"50px"}}/>
+        <Card position={{top:"220px", right:"650px"}} width="250px" height="300px"/>
+        <Card position={{top:"220px", right:"350px"}} width="250px" height="300px"/>
+        <Card position={{top:"220px", right:"50px"}} width="250px" height="300px" />
       </div>
       </>
     );
