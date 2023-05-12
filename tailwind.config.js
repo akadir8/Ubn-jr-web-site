@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       animation:{
-        bounce: "bounce 2.5s infinite"
+        bounce: "bounce 3s infinite"
       }
     },
     fontFamily: {
