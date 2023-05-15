@@ -18,7 +18,7 @@ function App() {
     {name:"Elektronik",link:"/"},
   ];
   return (
-    <div className="App ">
+    <div className="App">
     {/* Bu bileşenler daha sonra <Navbar />, <Page /> ve <Footer /> bileşenlerinde kullanılacak olan prop'lar olarak iletilir. <Navbar /> bileşeni, uygulamanın üst kısmında bir navigasyon çubuğu sağlar ve activeLink değeri burada kullanılır. <Page /> bileşeni, kullanıcının seçtiği bağlantıya göre farklı bir içerik gösterir. <Footer /> bileşeni, uygulamanın alt kısmında bir footer sağlar. */}
       <Navbar activeLink={activeLink} setActiveLink={setActiveLink} Links={Links} />
       <Page activeLink={activeLink} />

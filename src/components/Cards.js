@@ -51,9 +51,7 @@ function Card(props) {
         <div className="modal-content">
           <h2 className="text-center text-2xl font-bold" style={{ marginTop: "15px", marginBottom: "10px" }}>Lorem, ipsum.</h2>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias
-            eveniet dolorem ipsam quibusdam dolorum, quae itaque necessitatibus
-            eum alias nemo provident nulla voluptatem minima sunt, ex sequi at!
+            Lorem1000
           </p>
           <button
             type="button"

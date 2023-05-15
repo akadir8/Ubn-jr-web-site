@@ -7,9 +7,6 @@ body {
     background-color: rgb(223, 235, 238);
 }
 
-Footer {
-    background-color: rgb(223, 235, 238) ;
-}
 
 #navBar{
     background-color: white ;
@@ -52,4 +49,15 @@ Footer {
     position: relative;
     top: 8px;
   }
+  
+  @media (max-width: 780px) {
+    .animate-bounce {
+      display: none;
+    }
+    
+    .animate{
+      display: none;
+    }
+  }
+
   
