@@ -21,6 +21,7 @@ export default function OppositeContentTimeline() {
           flex: 0,
         },
         position: "fixed",
+        left: "70px",
         bottom: 0,
         width: "100%",
       }}
