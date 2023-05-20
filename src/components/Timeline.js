@@ -35,7 +35,7 @@ export default function OppositeContentTimeline() {
         </TimelineSeparator>
         <TimelineContent sx={{ marginTop: "12px", marginLeft:"-7px",paddingBottom: "12px" }}>
           En son çıkan Makaleler;
-          <div style={{ borderTop: "1px solid #0080FF", width: "12%" }}></div>
+          <div style={{ borderTop: "2px solid #0080FF", width: "12%" }}></div>
         </TimelineContent>
       </TimelineItem>
 
