@@ -2,6 +2,7 @@ import HomePage from "./HomePage";
 import jsonData from "./data.json";
 import SocialMedia from "./SocialMedia";
 import Card from "./Cards";
+import BlueButton from "./BlueButton";
 
 function Page({ activeLink }) {
   if (activeLink === 0) {
@@ -41,6 +42,10 @@ function Page({ activeLink }) {
             />
           ))}
         </div>
+        <div className="fixed bottom-5 right-5">
+  <BlueButton />
+</div>
+
       </>
     );
   }
