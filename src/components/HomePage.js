@@ -28,8 +28,8 @@ function HomePage() {
         />
       </div>
       <div
-        id="myDiv"
-        className="hidden lg:flex flex-col gap-5 rounded-md shadow-lg shadow-[#00A8CC] absolute top-0 bottom-0 m-auto right-10 bg-white p-6 h-fit w-1/3"
+       className="hidden lg:flex flex-col gap-5 rounded-md shadow-lg shadow-[#00A8CC] absolute top-44 m-auto right-10 bg-white p-6 h-fit w-1/3"
+
       >
         <h1 className="text-4xl font-bold text-cyan-700">
           Lorem, ipsum dolor.
