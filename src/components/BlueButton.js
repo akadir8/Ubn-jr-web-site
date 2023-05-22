@@ -9,8 +9,6 @@ const BlueButton = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    // You can access form field values using e.target.elements
   };
 
   return (
@@ -19,7 +17,7 @@ const BlueButton = () => {
         className="w-10 h-10 rounded-full bg-blue-500 text-white flex items-center justify-center"
         onClick={handleButtonClick}
       >
-        <span className="text-xl text-center">+</span>
+        <span className="text-xl mb-1">+</span>
       </button>
       {showPopup && (
         <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-gray-500 bg-opacity-50">
