@@ -10,6 +10,10 @@ const BlueButton = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+  
+  function toggleModal() {
+    setShowPopup(!showPopup);
+  }
 
   return (
     <div>
@@ -22,6 +26,14 @@ const BlueButton = () => {
       {showPopup && (
         <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-gray-500 bg-opacity-50">
           <div className="bg-white p-6 rounded-md shadow-lg">
+          <button
+            type="button"
+            className=" bg-cyan-600 hover:bg-[#569DAA] text-white font-bold py-1 px-2 rounded"
+            onClick={toggleModal}
+            style={{ marginTop: "-18px" }}
+          >
+            X
+          </button>
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label htmlFor="title" className="font-bold">
@@ -58,6 +70,7 @@ const BlueButton = () => {
                   required
                 />
               </div>
+              
               <button
                 type="submit"
                 className="bg-blue-500 text-white px-4 py-2 rounded-md"
