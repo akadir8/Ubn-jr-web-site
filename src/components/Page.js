@@ -31,8 +31,6 @@ function Page({ activeLink }) {
             { top: "220px", right: "650px" },
             { top: "220px", right: "350px" },
             { top: "220px", right: "50px" },
-            { top: "220px", right: "-250px" },
-            { top: "220px", right: "-550px" },
           ].map((position, index) => (
             <Card
               key={index}
