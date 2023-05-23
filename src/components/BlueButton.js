@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const BlueButton = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -10,7 +10,7 @@ const BlueButton = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
-  
+
   function toggleModal() {
     setShowPopup(!showPopup);
   }
@@ -25,19 +25,20 @@ const BlueButton = () => {
       </button>
       {showPopup && (
         <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-gray-500 bg-opacity-50">
-          <div className="bg-white p-6 rounded-md shadow-lg">
-          <button
-            type="button"
-            className=" bg-cyan-600 hover:bg-[#569DAA] text-white font-bold py-1 px-2 rounded"
-            onClick={toggleModal}
-            style={{ marginTop: "-18px" }}
-          >
-            X
-          </button>
+          <div className="inline-block align-bottom bg-white p-6 rounded-lg px-4 pt-5 pb-4 text-left w-3/6 shadow-lg">
+          <div className="text-right">
+            <button
+              type="button"
+              className="inline-flex justify-center py-1 px-2 border border-transparent shadow-sm text-xs font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              onClick={toggleModal}
+            >
+              X
+            </button>
+          </div>
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label htmlFor="title" className="font-bold">
-                  Title:
+                  Başlık:
                 </label>
                 <input
                   type="text"
@@ -49,18 +50,21 @@ const BlueButton = () => {
               </div>
               <div className="mb-4">
                 <label htmlFor="content" className="font-bold">
-                  Content:
+                  İçerik:
                 </label>
                 <textarea
                   id="content"
                   name="content"
                   className="w-full border rounded-md py-2 px-3"
                   required
+                  rows={5} // İstediğiniz satır sayısını burada belirtebilirsiniz
+                  maxLength={100000} // Karakter sınırını burada belirtebilirsiniz
                 ></textarea>
               </div>
+
               <div className="mb-4">
                 <label htmlFor="author" className="font-bold">
-                  Author:
+                  Yazan:
                 </label>
                 <input
                   type="text"
@@ -70,13 +74,14 @@ const BlueButton = () => {
                   required
                 />
               </div>
-              
+              <div className="text-right">
               <button
                 type="submit"
-                className="bg-blue-500 text-white px-4 py-2 rounded-md"
+                className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               >
-                Submit
+                GÖNDER
               </button>
+            </div>
             </form>
           </div>
         </div>
