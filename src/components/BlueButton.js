@@ -35,7 +35,7 @@ const BlueButton = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setTextData((prevFormData) => ({ ...prevFormData, [name]: value }));
+    setTextData((prevTextData) => ({ ...prevTextData, [name]: value }));
   };
 
   function toggleModal() {
