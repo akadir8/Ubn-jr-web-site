@@ -17,7 +17,7 @@ const BlueButton = () => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:5000/api/mongo", textData)
+      .post("http://localhost:5000/api/mongo/abdulkadir", textData)
       .then((response) => {
         console.log(response.data);
       })

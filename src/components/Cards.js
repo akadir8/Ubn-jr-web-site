@@ -1,8 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "react-modal";
+import axios from "axios";
 
 function Card(props) {
   const [showModal, setShowModal] = useState(false);
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get("http://localhost:5000/api/mongo/abdulkadir");
+      setData(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   function toggleModal() {
     setShowModal(!showModal);
@@ -17,42 +32,31 @@ function Card(props) {
 
   return (
     <>
-      <div
-  className="card bg-white border border-gray-300 rounded-lg"
-  style={cardStyle}
->
-  <h2 className="text-center font-bold" style={{ marginTop: "20px" }}>
-    Lorem, ipsum.
-  </h2>
-  <div
-    className={`card-content ${
-      showModal ? "card-content-show" : "card-content-opacity"
-    }`}
-    style={{ overflow: "hidden" }}
-  >
-    <p className="text-left" style={{ marginTop: "-10px" }}>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a eros vitae
-      nunc bibendum suscipit ac eget purus. Sed ac eros nibh. In aliquam augue
-      vel est fringilla vehicula. Proin eu leo quam. Etiam porta sem malesuada
-      magna mollis euismod.
-    </p>
-  </div>
-  <button
-    type="button"
-    className="bg-cyan-600 hover:bg-[#569DAA] text-white font-bold py-1 px-2 rounded"
-    onClick={toggleModal}
-    style={{ position: "absolute", bottom: "10px", right: "10px" }}
-  >
-    Devamı..
-  </button>
-</div>
+      <div className="card bg-white border border-gray-300 rounded-lg" style={cardStyle}>
+        <h2 className="text-center font-bold" style={{ marginTop: "20px" }}>
+          {data.title}
+        </h2>
+        <div className={`card-content ${showModal ? "card-content-show" : "card-content-opacity"}`} style={{ overflow: "hidden" }}>
+          <p className="text-left" style={{ marginTop: "-10px" }}>
+            {data.content}
+          </p>
+        </div>
+        <button
+          type="button"
+          className="bg-cyan-600 hover:bg-[#569DAA] text-white font-bold py-1 px-2 rounded"
+          onClick={toggleModal}
+          style={{ position: "absolute", bottom: "10px", right: "10px" }}
+        >
+          Devamı..
+        </button>
+      </div>
 
       <Modal isOpen={showModal} onRequestClose={toggleModal}>
         <div className="modal-content">
-          <h2 className="text-center text-2xl font-bold" style={{ marginTop: "15px", marginBottom: "10px" }}>Lorem, ipsum.</h2>
-          <p>
-            Lorem1000
-          </p>
+          <h2 className="text-center text-2xl font-bold" style={{ marginTop: "15px", marginBottom: "10px" }}>
+            {data.title}
+          </h2>
+          <p>{data.content}</p>
           <button
             type="button"
             className=" bg-cyan-600 hover:bg-[#569DAA] text-white font-bold py-1 px-2 rounded"
@@ -66,4 +70,5 @@ function Card(props) {
     </>
   );
 }
+
 export default Card;
