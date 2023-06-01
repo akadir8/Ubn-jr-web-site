@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo2.png";
+import logo from "./assets/ubnjr.png";
 import Button from "./ButonPage";
 import Form from "./Form";
 import Toast from "./Toast";
