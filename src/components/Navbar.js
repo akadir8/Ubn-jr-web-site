@@ -26,7 +26,7 @@ function Navbar(props) {
           id="navBar"
           className="md:flex items-center justify-center py-4 md:px-10 px-7"
         >
-          <div className="font-bold mr-48 text-2xl cursor-pointer flex items-center font-font text-gray-800">
+          <div className="font-bold mr-48 text-2xl cursor-pointer flex items-center font-font text-sky-800">
             <span>
               <img
                 src={logo}
@@ -44,7 +44,7 @@ function Navbar(props) {
               <li key={link.name} className="md:ml-8 text-xl">
                 <button
                   onClick={() => setActiveLink(index)}
-                  className={`text-gray-800 hover:text-gray-400 duration-100 ${
+                  className={`text-sky-800 hover:text-gray-400 duration-100 ${
                     activeLink === index ? "font-bold" : ""
                   }`}
                 >
