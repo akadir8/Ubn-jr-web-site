@@ -1,4 +1,4 @@
-import logo from "./logo1.png";
+import logo from "./assets/logo1.png";
 import SocialMedia from "./SocialMedia";
 import Typist from "react-text-typist";
 import Timeline from "./Timeline";
