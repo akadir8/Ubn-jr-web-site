@@ -14,7 +14,6 @@ function Page({ activeLink }) {
       { name: "Tasarım", link: "/" },
       { name: "Elektronik", link: "/" },
     ][activeLink - 1];
-
     const { header, content } = jsonData[link.name.toLowerCase()];
 
     return (
@@ -27,23 +26,23 @@ function Page({ activeLink }) {
           </p>
         </div>
         <div>
-          {[
-            { top: "220px", right: "650px" },
-            { top: "220px", right: "350px" },
-            { top: "220px", right: "50px" },
-          ].map((position, index) => (
+          <div>
+          {[1].map((index) => (
             <Card
               key={index}
-              position={position}
+              position={{
+                top: "220px",
+                right: `${(index + 1) * 300 + 50}px`,
+              }}
               width="250px"
               height="300px"
             />
           ))}
+          </div>
         </div>
         <div className="fixed bottom-5 right-5">
-  <BlueButton />
-</div>
-
+          <BlueButton />
+        </div>
       </>
     );
   }
