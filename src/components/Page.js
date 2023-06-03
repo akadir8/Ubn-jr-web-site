@@ -1,3 +1,5 @@
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import HomePage from "./HomePage";
 import jsonData from "./data.json";
 import SocialMedia from "./SocialMedia";
@@ -5,6 +7,22 @@ import Card from "./Cards";
 import BlueButton from "./BlueButton";
 
 function Page({ activeLink }) {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/api/mongo/abdulkadir");
+        const dataArray = response.data.dataArray;
+        setData(dataArray);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   if (activeLink === 0) {
     return <HomePage />;
   } else {
@@ -14,6 +32,7 @@ function Page({ activeLink }) {
       { name: "Tasarım", link: "/" },
       { name: "Elektronik", link: "/" },
     ][activeLink - 1];
+
     const { header, content } = jsonData[link.name.toLowerCase()];
 
     return (
@@ -26,19 +45,14 @@ function Page({ activeLink }) {
           </p>
         </div>
         <div>
-          <div>
-          {[1].map((index) => (
+          {data.map((item, index) => (
             <Card
               key={index}
-              position={{
-                top: "220px",
-                right: `${(index + 1) * 300 + 50}px`,
-              }}
-              width="250px"
-              height="300px"
+              position={item.position}
+              width={item.width}
+              height={item.height}
             />
           ))}
-          </div>
         </div>
         <div className="fixed bottom-5 right-5">
           <BlueButton />
