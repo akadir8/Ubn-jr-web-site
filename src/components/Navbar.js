@@ -30,14 +30,15 @@ function Navbar(props) {
             <span>
               <img
                 src={logo}
-                width={38}
-                height={38}
+                width={48}
+                height={48}
                 alt=""
                 style={{ marginRight: "10px" }}
                 title="Ubn-Jr"
               />
             </span>
-            Ubn-Jr
+            <p>Ubn-Jr <br /> <p className="text-xs">You Be Not Junior!</p></p>
+
           </div>
           <ul className=" md:flex md:items-center">
           {Links.map((link, index) => (
