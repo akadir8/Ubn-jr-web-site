@@ -10,18 +10,19 @@ function Page({ activeLink }) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get("http://localhost:5000/api/mongo/abdulkadir");
-        const dataArray = response.data.dataArray;
-        setData(dataArray);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
     fetchData();
   }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:5000/api/mongo/abdulkadir"
+      );
+      setData(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   if (activeLink === 0) {
     return <HomePage />;
@@ -45,14 +46,25 @@ function Page({ activeLink }) {
           </p>
         </div>
         <div>
-          {data.map((item, index) => (
-            <Card
-              key={index}
-              position={item.position}
-              width={item.width}
-              height={item.height}
-            />
-          ))}
+        {data.length > 0 &&
+  data.map((item, index) => (
+    <Card
+      key={index}
+      cardContent={{
+        position: item.position,
+        width: "250px",
+        height: "300px",
+        title: item.title,
+        content: item.content,
+        author: item.author,
+      }}
+      position={{
+        top: "220px",
+        right: `${(index + 1) * 300 + 50}px`,
+      }}
+    />
+  ))}
+
         </div>
         <div className="fixed bottom-5 right-5">
           <BlueButton />
