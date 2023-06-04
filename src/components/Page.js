@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import HomePage from "./HomePage";
 import jsonData from "./data.json";
 import SocialMedia from "./SocialMedia";
-import Card from "./Cards";
+import Card from "./Cards"; 
 import BlueButton from "./BlueButton";
 
 function Page({ activeLink }) {
@@ -45,26 +45,21 @@ function Page({ activeLink }) {
             <SocialMedia />
           </p>
         </div>
-        <div>
-        {data.length > 0 &&
-  data.map((item, index) => (
-    <Card
-      key={index}
-      cardContent={{
-        position: item.position,
-        width: "250px",
-        height: "300px",
-        title: item.title,
-        content: item.content,
-        author: item.author,
-      }}
-      position={{
-        top: "220px",
-        right: `${(index + 1) * 300 + 50}px`,
-      }}
-    />
-  ))}
-
+        <div className="flex flex-wrap justify-center gap-8">
+          {data.length > 0 &&
+            data.map((item, index) => (
+              <Card
+                key={index}
+                cardContent={{
+                  position: item.position,
+                  width: "250px",
+                  height: "300px",
+                  title: item.title,
+                  content: item.content,
+                  author: item.author,
+                }}
+              />
+            ))}
         </div>
         <div className="fixed bottom-5 right-5">
           <BlueButton />
