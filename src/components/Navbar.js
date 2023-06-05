@@ -19,6 +19,10 @@ function Navbar(props) {
     }, 3000);
   };
 
+  const handleClickLogo = () => {
+    window.location.href = "/";
+  };
+
   return (
     <div className="bg- w-full h-screen">
       <div className="shadow-md w-full fixed top-0 left-0">
@@ -26,7 +30,10 @@ function Navbar(props) {
           id="navBar"
           className="md:flex items-center justify-center py-4 md:px-10 px-7"
         >
-          <div className="font-bold mr-48 text-2xl cursor-pointer flex items-center font-font text-sky-800">
+          <div
+            className="font-bold mr-48 text-2xl cursor-pointer flex items-center font-font text-sky-800"
+            onClick={handleClickLogo}
+          >
             <span>
               <img
                 src={logo}
@@ -37,11 +44,13 @@ function Navbar(props) {
                 title="Ubn-Jr"
               />
             </span>
-            <p>Ubn-Jr <br /> <p className="text-xs">You Be Not Junior!</p></p>
-
+            <div>
+              <p>Ubn-Jr</p>
+              <p className="text-xs">You Be Not Junior!</p>
+            </div>
           </div>
           <ul className=" md:flex md:items-center">
-          {Links.map((link, index) => (
+            {Links.map((link, index) => (
               <li key={link.name} className="md:ml-8 text-xl">
                 <button
                   onClick={() => setActiveLink(index)}
