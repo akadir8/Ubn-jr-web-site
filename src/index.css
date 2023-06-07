@@ -49,7 +49,7 @@ body {
     position: relative;
     top: 8px;
   }
-  
+
   @media (max-width: 780px) {
     .animate-bounce {
       display: none;
