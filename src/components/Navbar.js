@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "./assets/ubnjr.png";
-import Button from "./ButonPage";
-import Form from "./Form";
+import Button from "./ContactButton";
+import Form from "./ContactForm";
 import Toast from "./Toast";
 
 function Navbar(props) {
