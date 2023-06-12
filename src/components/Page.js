@@ -4,7 +4,7 @@ import HomePage from "./HomePage";
 import jsonData from "./data.json";
 import SocialMedia from "./SocialMedia";
 import Card from "./Cards";
-import BlueButton from "./TextButton";
+import TextButton from "./TextButton";
 
 function Page({ activeLink }) {
   useEffect(() => {
@@ -69,7 +69,7 @@ function Page({ activeLink }) {
             ))}
         </div>
         <div className="fixed bottom-5 right-5">
-          <BlueButton />
+          <TextButton/>
         </div>
       </>
     );
