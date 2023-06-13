@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const TextForm = () => {
-  const [showPopup, setShowPopup] = useState(false);
+const TextForm = ({toggleForm}) => {
   const [textData, setTextData] = useState({
     title: "",
     content: "",
@@ -21,7 +20,7 @@ const TextForm = () => {
         console.log(error);
       });
 
-    setShowPopup(false);
+    toggleForm(false);
     setTextData({
       title: "",
       content: "",
@@ -34,20 +33,16 @@ const TextForm = () => {
     setTextData((prevTextData) => ({ ...prevTextData, [name]: value }));
   };
 
-  function toggleModal() {
-    setShowPopup(!showPopup);
-  }
-
   return (
     <div>
-      {showPopup && (
+      {toggleForm && (
         <div className="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-gray-500 bg-opacity-50">
           <div className="inline-block align-bottom bg-white p-6 rounded-lg px-4 pt-5 pb-4 text-left w-3/6 shadow-lg">
             <div className="text-right">
               <button
                 type="button"
                 className="inline-flex justify-center py-1 px-2 border border-transparent shadow-sm text-xs font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                onClick={toggleModal}
+                onClick={toggleForm}
               >
                 X
               </button>
