@@ -5,8 +5,11 @@ import jsonData from "./data.json";
 import SocialMedia from "./SocialMedia";
 import Card from "./Cards";
 import TextButton from "./TextButton";
+import TextForm from "./TextForm";
 
 function Page({ activeLink }) {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const toggleForm = () => setIsOpen(!isOpen);
   useEffect(() => {
     document.documentElement.style.overflow = "hidden";
   }, []);
@@ -69,7 +72,8 @@ function Page({ activeLink }) {
             ))}
         </div>
         <div className="fixed bottom-5 right-5">
-          <TextButton/>
+          <TextButton handleButtonClick={toggleForm} />
+          {isOpen && <TextForm toggleForm={toggleForm} />}
         </div>
       </>
     );
