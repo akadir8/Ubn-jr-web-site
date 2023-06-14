@@ -27,7 +27,7 @@ body {
   }
 
 .card-content {
-    height: 60%;
+    height: 21ch;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
