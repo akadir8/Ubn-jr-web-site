@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
-import Page from "./components/Page";
+import Footer from "./Layouts/Footer";
+import Navbar from "./Layouts/Navbar";
+import Page from "./Pages/Page";
 
 function App() {
   const [activeLink, setActiveLink] = useState(0);
