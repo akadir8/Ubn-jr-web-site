@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const TextButton = ({ handleButtonClick }) => {
   return (
@@ -10,7 +10,7 @@ const TextButton = ({ handleButtonClick }) => {
         <span className="text-xl mb-1">+</span>
       </button>
     </div>
-  )
-}
+  );
+};
 
 export default TextButton;
