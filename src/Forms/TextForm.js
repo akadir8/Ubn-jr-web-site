@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const TextForm = ({toggleForm}) => {
+const TextForm = ({ toggleForm }) => {
   const [textData, setTextData] = useState({
     title: "",
     content: "",
     author: "",
+    category: "Software", // Add category state with initial value
   });
 
   const handleSubmit = (e) => {
@@ -25,6 +26,7 @@ const TextForm = ({toggleForm}) => {
       title: "",
       content: "",
       author: "",
+      category: "Software",
     });
   };
 
@@ -92,6 +94,25 @@ const TextForm = ({toggleForm}) => {
                   required
                 />
               </div>
+
+              <div className="mb-4">
+                <label htmlFor="category" className="font-bold mr-2">
+                  Kategori:
+                </label>
+                <select
+                  id="category"
+                  name="category"
+                  className="border rounded-md py-2 px-3"
+                  value={textData.category}
+                  onChange={handleChange}
+                >
+                  <option value="Software">Yazılım</option>
+                  <option value="Cyber">Siber</option>
+                  <option value="Design">Tasarım</option>
+                  <option value="Electronics">Elektronik</option>
+                </select>
+              </div>
+
               <div className="text-right">
                 <button
                   type="submit"
