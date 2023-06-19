@@ -52,25 +52,28 @@ function Page({ activeLink }) {
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-8">
-          {data.length > 0 &&
-            data.map((item, index) => (
-              <div
-                key={index}
-                style={{ position: "relative", top: "-480px", left: "280px" }}
-              >
-                <Card
-                  cardContent={{
-                    position: item.position,
-                    width: "250px",
-                    height: "300px",
-                    title: item.title,
-                    content: item.content,
-                    author: item.author,
-                  }}
-                />
-              </div>
-            ))}
+  {data.length > 0 &&
+    data
+      .map((item, index) => (
+        <div
+          key={index}
+          style={{ position: "relative", top: "-480px", left: "280px" }}
+        >
+          <Card
+            cardContent={{
+              position: item.position,
+              width: "250px",
+              height: "300px",
+              title: item.title,
+              content: item.content,
+              author: item.author,
+            }}
+          />
         </div>
+      ))
+      .reverse()}
+</div>
+
         <div className="fixed bottom-5 right-5">
           <TextButton handleButtonClick={toggleForm} />
           {isOpen && <TextForm toggleForm={toggleForm} />}
