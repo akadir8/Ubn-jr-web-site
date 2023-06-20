@@ -6,7 +6,7 @@ const TextForm = ({ toggleForm }) => {
     title: "",
     content: "",
     author: "",
-    category: "Software", // Add category state with initial value
+    category: "Yazılım",
   });
 
   const handleSubmit = (e) => {
@@ -26,7 +26,7 @@ const TextForm = ({ toggleForm }) => {
       title: "",
       content: "",
       author: "",
-      category: "Software",
+      category: "Yazılım",
     });
   };
 
@@ -106,10 +106,10 @@ const TextForm = ({ toggleForm }) => {
                   value={textData.category}
                   onChange={handleChange}
                 >
-                  <option value="Software">Yazılım</option>
-                  <option value="Cyber">Siber</option>
-                  <option value="Design">Tasarım</option>
-                  <option value="Electronics">Elektronik</option>
+                  <option value="Yazılım">Yazılım</option>
+                  <option value="Sibe">Siber</option>
+                  <option value="Tasarım">Tasarım</option>
+                  <option value="Elektronik">Elektronik</option>
                 </select>
               </div>
 
