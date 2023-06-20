@@ -107,7 +107,7 @@ const TextForm = ({ toggleForm }) => {
                   onChange={handleChange}
                 >
                   <option value="Yazılım">Yazılım</option>
-                  <option value="Sibe">Siber</option>
+                  <option value="Siber">Siber</option>
                   <option value="Tasarım">Tasarım</option>
                   <option value="Elektronik">Elektronik</option>
                 </select>
