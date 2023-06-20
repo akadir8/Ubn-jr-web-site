@@ -39,6 +39,8 @@ function Page({ activeLink }) {
 
     const { header, content } = jsonData[link.name.toLowerCase()];
 
+    const filteredData = data.filter((item) => item.category === link.name);
+
     return (
       <>
         <div className="hidden lg:flex flex-col gap-5 rounded-md shadow-lg shadow-[#00A8CC] absolute top-56 m-auto left-10 bg-white p-6 h-fit w-1/3">
@@ -53,11 +55,10 @@ function Page({ activeLink }) {
             className="grid grid-cols-3 gap-4"
             style={{ gridAutoFlow: "row" }}
           >
-            {data.length > 0 &&
-              data
+            {filteredData.length > 0 &&
+              filteredData
                 .map((item, index) => (
-                  <div key={index}
-                  style={{ position: "relative", top: "-480px", left: "280px" }}>
+                  <div key={index} style={{ position: "relative", top: "-480px", left: "280px" }}>
                     <Card
                       cardContent={{
                         position: item.position,
