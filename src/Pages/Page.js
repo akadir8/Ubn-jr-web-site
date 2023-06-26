@@ -43,7 +43,7 @@ function Page({ activeLink }) {
 
     return (
       <>
-        <div className="hidden lg:flex flex-col gap-5 rounded-md shadow-lg shadow-[#00A8CC] fixed left-8 top-40 bg-white p-6 h-fit w-1/3">
+        <div className="hidden lg:flex flex-col gap-5 rounded-md shadow-lg shadow-[#00A8CC] fixed left-10 top-40 bg-white p-6 h-fit w-1/3">
           <h2 className="text-4xl font-bold text-cyan-700">{header}</h2>
           <p className="text-gray-800 font-semibold">{content}</p>
           <SocialMedia />
@@ -61,7 +61,7 @@ function Page({ activeLink }) {
                     key={index}
                     style={{
                       position: "relative",
-                      top: "-480px",
+                      top: "-559px",
                       left: "280px",
                     }}
                   >
