@@ -19,7 +19,7 @@ function Page({ activeLink }) {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/mongo/abdulkadir"
+        "http://13.48.57.90:5000/api/mongo/abdulkadir"
       );
       setData(response.data);
     } catch (error) {
@@ -39,17 +39,16 @@ function Page({ activeLink }) {
 
     const { header, content } = jsonData[link.name.toLowerCase()];
 
-    const filteredData = data.filter((item) => item.category === link.name);
+    const filteredData = data.filter(item => item.category === link.name);
 
     return (
       <>
-        <div className="hidden lg:flex flex-col gap-5 rounded-md shadow-lg shadow-[#00A8CC] absolute top-56 m-auto left-10 bg-white p-6 h-fit w-1/3">
+        <div className="hidden lg:flex flex-col gap-5 rounded-md shadow-lg shadow-[#00A8CC] fixed left-8 top-40 bg-white p-6 h-fit w-1/3">
           <h2 className="text-4xl font-bold text-cyan-700">{header}</h2>
           <p className="text-gray-800 font-semibold">{content}</p>
-          <p>
-            <SocialMedia />
-          </p>
+          <SocialMedia />
         </div>
+
         <div className="flex justify-center gap-8">
           <div
             className="grid grid-cols-3 gap-4"
@@ -58,7 +57,14 @@ function Page({ activeLink }) {
             {filteredData.length > 0 &&
               filteredData
                 .map((item, index) => (
-                  <div key={index} style={{ position: "relative", top: "-480px", left: "280px" }}>
+                  <div
+                    key={index}
+                    style={{
+                      position: "relative",
+                      top: "-480px",
+                      left: "280px",
+                    }}
+                  >
                     <Card
                       cardContent={{
                         position: item.position,
