@@ -24,7 +24,7 @@ function Navbar(props) {
   };
 
   return (
-    <div className="bg- w-full h-screen">
+    <div className="w-full h-screen">
       <div className="shadow-md w-full fixed top-0 left-0">
         <div
           id="navBar"
