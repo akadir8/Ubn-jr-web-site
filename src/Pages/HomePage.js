@@ -27,15 +27,16 @@ function HomePage() {
           loop
         />
       </div>
-      <div className="hidden lg:flex flex-col gap-5 rounded-md shadow-lg shadow-[#00A8CC] absolute top-44 m-auto right-10 bg-white p-6 h-fit w-1/3">
-        <h1 className="text-4xl font-bold text-cyan-700">
-          Lorem, ipsum dolor.
-        </h1>
+      <div className="hidden lg:flex flex-col gap-5 rounded-md shadow-lg shadow-[#00A8CC] absolute top-28 m-auto right-10 bg-white p-6 h-fit w-1/3">
+        <h1 className="text-4xl font-bold text-cyan-700">Ubn-Jr</h1>
         <p className="text-gray-800 font-semibold">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit
-          ratione totam illum harum rerum magnam hic sed architecto dolorum
-          deleniti vel, adipisci neque libero, ea eius repellendus. Ipsa,
-          inventore perferendis!
+          Ubn-Jr, genç yetenekleri bir araya getirerek, desteklemek ve onları
+          geliştirmek, onlara yenilikçi bir platform sunan bir şirkettir. Amacı,
+          genç beyinleri teknoloji dünyasında daha da ileriye taşıyacak projeler
+          üretmeleri için teşvik etmektir. Ubn-Jr, gençlerin öğrenme sürecini
+          destekleyerek geleceğin teknoloji liderlerini yetiştirmeye odaklanır.
+          Ubn-Jr'nin bu yenilikçi yaklaşımı, gelecekteki teknoloji
+          gelişmelerinde genç beyinlerin önemli bir rol oynamasını sağlayacak.
         </p>
         <SocialMedia />
       </div>
