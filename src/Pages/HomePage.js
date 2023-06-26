@@ -31,12 +31,12 @@ function HomePage() {
         <h1 className="text-4xl font-bold text-cyan-700">Ubn-Jr</h1>
         <p className="text-gray-800 font-semibold">
           Ubn-Jr, genç yetenekleri bir araya getirerek, desteklemek ve onları
-          geliştirmek, onlara yenilikçi bir platform sunan bir şirkettir. Amacı,
+          geliştirmek, onlara yenilikçi bir platform sunan bir oluşumdur. Amacı,
           genç beyinleri teknoloji dünyasında daha da ileriye taşıyacak projeler
           üretmeleri için teşvik etmektir. Ubn-Jr, gençlerin öğrenme sürecini
           destekleyerek geleceğin teknoloji liderlerini yetiştirmeye odaklanır.
           Ubn-Jr'nin bu yenilikçi yaklaşımı, gelecekteki teknoloji
-          gelişmelerinde genç beyinlerin önemli bir rol oynamasını sağlayacak.
+          gelişmelerinde genç beyinlerin önemli bir rol oynamasını sağlamaktır.
         </p>
         <SocialMedia />
       </div>
