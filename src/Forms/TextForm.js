@@ -13,7 +13,7 @@ const TextForm = ({ toggleForm }) => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:5000/api/mongo/abdulkadir", textData)
+      .post("http://13.48.57.90:5000/api/mongo/abdulkadir", textData)
       .then((response) => {
         console.log(response.data);
       })
