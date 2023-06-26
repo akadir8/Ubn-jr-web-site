@@ -14,7 +14,7 @@ const OppositeContentTimeline = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/mongo/abdulkadir');
+        const response = await axios.get('http://13.48.57.90:5000/api/mongo/abdulkadir');
         const data = response.data.slice(0, 3);
         setArticles(data);
       } catch (error) {
